@@ -1,4 +1,4 @@
-const { getAllAlumni, getAlumniByNISN } = require('../models/alumniModel')
+const { getAllAlumni, getAlumniByNISN, insertAlumni } = require('../models/alumniModel')
 const respondFormatter = require('../utils/respondFormatter')
 
 const showAlumni = (req, res) => {
@@ -23,4 +23,14 @@ const showAlumniByNISN = (req, res) => {
     })
 }
 
-module.exports = { showAlumni, showAlumniByNISN }
+const addAlumni = (req, res) => {
+    const data = req.body
+    insertAlumni(data, (error, results) => {
+        if (error) {
+            res.send(error)
+        }
+        res.json(respondFormatter('success', 'Berhasil menambahkan data', results))
+    })
+}
+
+module.exports = { showAlumni, showAlumniByNISN, addAlumni }

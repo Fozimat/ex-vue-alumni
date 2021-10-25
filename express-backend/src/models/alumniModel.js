@@ -20,4 +20,14 @@ const getAlumniByNISN = (nisn, result) => {
     })
 }
 
-module.exports = { getAllAlumni, getAlumniByNISN }
+const insertAlumni = (data, result) => {
+    connection.query(`INSERT INTO alumni SET ?`, [data], (error, results) => {
+        if (error) {
+            console.log("Error: ", error)
+            return result(error, null)
+        }
+        result(null, results)
+    })
+}
+
+module.exports = { getAllAlumni, getAlumniByNISN, insertAlumni }

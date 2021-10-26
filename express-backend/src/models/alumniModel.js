@@ -10,6 +10,16 @@ const getAllAlumni = (result) => {
     })
 }
 
+const getSearchAlumni = (nama, result) => {
+    connection.query('SELECT * FROM alumni WHERE nama LIKE ?', '%' + nama + '%', (error, results) => {
+        if (error) {
+            console.log("Error: ", error)
+            return result(error, null)
+        }
+        result(null, results)
+    })
+}
+
 const getAlumniById = (id, result) => {
     connection.query(`SELECT * FROM alumni WHERE id = ${id}`, (error, results) => {
         if (error) {
@@ -51,4 +61,4 @@ const deleteAlumni = (id, result) => {
     })
 }
 
-module.exports = { getAllAlumni, getAlumniById, insertAlumni, updateAlumni, deleteAlumni }
+module.exports = { getAllAlumni, getAlumniById, insertAlumni, updateAlumni, deleteAlumni, getSearchAlumni }

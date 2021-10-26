@@ -1,4 +1,4 @@
-const { getAllAlumni, getAlumniById, insertAlumni, updateAlumni, deleteAlumni } = require('../models/alumniModel')
+const { getAllAlumni, getAlumniById, insertAlumni, updateAlumni, deleteAlumni, getSearchAlumni } = require('../models/alumniModel')
 const respondFormatter = require('../utils/respondFormatter')
 
 const showAlumni = (req, res) => {
@@ -7,6 +7,16 @@ const showAlumni = (req, res) => {
             res.send(error)
         }
         res.json(respondFormatter('success', 'Daftar data seluruh alumni', results))
+    })
+}
+
+const searchAlumni = (req, res) => {
+    const nama = req.params.nama
+    getSearchAlumni(nama, (error, results) => {
+        if (error) {
+            res.send(error)
+        }
+        res.send(results)
     })
 }
 
@@ -54,4 +64,4 @@ const removeAlumni = (req, res) => {
     })
 }
 
-module.exports = { showAlumni, showAlumniById, addAlumni, editAlumni, removeAlumni }
+module.exports = { showAlumni, showAlumniById, addAlumni, editAlumni, removeAlumni, searchAlumni }

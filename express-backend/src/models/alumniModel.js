@@ -41,4 +41,14 @@ const updateAlumni = (data, id, result) => {
         })
 }
 
-module.exports = { getAllAlumni, getAlumniById, insertAlumni, updateAlumni }
+const deleteAlumni = (id, result) => {
+    connection.query('DELETE FROM alumni WHERE id = ?', [id], (error, results) => {
+        if (error) {
+            console.log("Error: ", error)
+            return result(error, null)
+        }
+        result(null, results)
+    })
+}
+
+module.exports = { getAllAlumni, getAlumniById, insertAlumni, updateAlumni, deleteAlumni }

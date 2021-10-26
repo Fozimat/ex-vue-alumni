@@ -1,4 +1,4 @@
-const { getAllAlumni, getAlumniById, insertAlumni, updateAlumni } = require('../models/alumniModel')
+const { getAllAlumni, getAlumniById, insertAlumni, updateAlumni, deleteAlumni } = require('../models/alumniModel')
 const respondFormatter = require('../utils/respondFormatter')
 
 const showAlumni = (req, res) => {
@@ -44,4 +44,14 @@ const editAlumni = (req, res) => {
     })
 }
 
-module.exports = { showAlumni, showAlumniById, addAlumni, editAlumni }
+const removeAlumni = (req, res) => {
+    const id = req.params.id
+    deleteAlumni(id, (error, results) => {
+        if (error) {
+            res.send(error)
+        }
+        res.json(results)
+    })
+}
+
+module.exports = { showAlumni, showAlumniById, addAlumni, editAlumni, removeAlumni }

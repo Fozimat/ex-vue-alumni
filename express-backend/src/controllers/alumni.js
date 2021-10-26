@@ -1,4 +1,4 @@
-const { getAllAlumni, getAlumniByNISN, insertAlumni } = require('../models/alumniModel')
+const { getAllAlumni, getAlumniById, insertAlumni, updateAlumni } = require('../models/alumniModel')
 const respondFormatter = require('../utils/respondFormatter')
 
 const showAlumni = (req, res) => {
@@ -10,16 +10,16 @@ const showAlumni = (req, res) => {
     })
 }
 
-const showAlumniByNISN = (req, res) => {
-    getAlumniByNISN(req.params.nisn, (error, results) => {
+const showAlumniById = (req, res) => {
+    getAlumniById(req.params.id, (error, results) => {
         if (error) {
             res.send(error)
         }
         if (results.length === 0) {
-            res.json(respondFormatter('error', `Data alumni berdasarkan NISN`, []))
+            res.json(respondFormatter('error', `Data alumni berdasarkan ID`, []))
             return
         }
-        res.json(respondFormatter('success', `Data alumni berdasarkan NISN`, results))
+        res.json(respondFormatter('success', `Data alumni berdasarkan ID`, results))
     })
 }
 
@@ -33,4 +33,15 @@ const addAlumni = (req, res) => {
     })
 }
 
-module.exports = { showAlumni, showAlumniByNISN, addAlumni }
+const editAlumni = (req, res) => {
+    const data = req.body
+    const id = req.params.id
+    updateAlumni(data, id, (error, results) => {
+        if (error) {
+            res.send(error)
+        }
+        res.json(results)
+    })
+}
+
+module.exports = { showAlumni, showAlumniById, addAlumni, editAlumni }

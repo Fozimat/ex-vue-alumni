@@ -10,8 +10,8 @@ const getAllAlumni = (result) => {
     })
 }
 
-const getAlumniByNISN = (nisn, result) => {
-    connection.query(`SELECT * FROM alumni WHERE nisn = ${nisn}`, (error, results) => {
+const getAlumniById = (id, result) => {
+    connection.query(`SELECT * FROM alumni WHERE id = ${id}`, (error, results) => {
         if (error) {
             console.log("Error: ", error)
             return result(error, null)
@@ -30,4 +30,15 @@ const insertAlumni = (data, result) => {
     })
 }
 
-module.exports = { getAllAlumni, getAlumniByNISN, insertAlumni }
+const updateAlumni = (data, id, result) => {
+    connection.query('UPDATE alumni SET nisn = ?, nama = ?, jenis_kelamin = ?, tahun_masuk = ?, tahun_lulus = ?, no_telp = ?, alamat = ?, email = ?, tanggal_lahir = ?, tempat_lahir = ? WHERE id = ?'
+        , [data.nisn, data.nama, data.jenis_kelamin, data.tahun_masuk, data.tahun_lulus, data.no_telp, data.alamat, data.email, data.tanggal_lahir, data.tempat_lahir, id], (error, results) => {
+            if (error) {
+                console.log("Error: ", error)
+                return result(error, null)
+            }
+            result(null, results)
+        })
+}
+
+module.exports = { getAllAlumni, getAlumniById, insertAlumni, updateAlumni }

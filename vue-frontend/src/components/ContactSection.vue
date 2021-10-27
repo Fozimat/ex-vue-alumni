@@ -16,7 +16,7 @@
             <div class="address">
               <i class="bi bi-geo-alt"></i>
               <h4>Location:</h4>
-              <p>A108 Adam Street, New York, NY 535022</p>
+              <p>Togo Street, Nankatsu, TGS 535022, JAPAN</p>
             </div>
 
             <div class="email">

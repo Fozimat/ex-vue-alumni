@@ -21,8 +21,9 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
       <!-- .navbar -->
-
-      <a href="courses.html" class="get-started-btn">Register</a>
+      <router-link to="register" class="get-started-btn" active-class="active"
+        >Register</router-link
+      >
     </div>
   </header>
 </template>

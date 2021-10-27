@@ -7,12 +7,24 @@
     >
       <h1>Keep in touch,<br />With all of us</h1>
       <h2>
-        Website Alumni SMP Negeri 99 Isekai Utara
+        Alumni Website of
+        <span class="fs-2 fw-bold">Ouran Private Academy </span>
+        High School
       </h2>
       <a href="courses.html" class="btn-get-started">Register</a>
     </div>
   </section>
 </template>
+
+<style scoped>
+#hero h2 {
+  color: rgb(231, 226, 226);
+}
+
+span {
+  color: #fff;
+}
+</style>
 
 <script>
 export default {

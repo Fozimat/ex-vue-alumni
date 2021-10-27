@@ -2,7 +2,7 @@
   <div>
     <Header />
     <main id="main">
-      <Breadcumb />
+      <Breadcumb :heading="subtitle" />
     </main>
     <ContactSection />
     <Footer />
@@ -22,6 +22,11 @@ export default {
     ContactSection,
     Breadcumb,
     Footer,
+  },
+  data() {
+    return {
+      subtitle: "Contact",
+    };
   },
 };
 </script>

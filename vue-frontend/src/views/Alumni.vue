@@ -2,7 +2,7 @@
   <div>
     <Header />
     <main id="main">
-      <Breadcumb />
+      <Breadcumb :heading="subtitle" />
 
       <AlumniTable />
     </main>
@@ -23,6 +23,11 @@ export default {
     Breadcumb,
     AlumniTable,
     Footer,
+  },
+  data() {
+    return {
+      subtitle: "Alumni",
+    };
   },
 };
 </script>

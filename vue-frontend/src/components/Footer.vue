@@ -4,11 +4,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Mentor</h3>
+            <h3>Ouran Academy</h3>
             <p>
-              A108 Adam Street <br />
-              New York, NY 535022<br />
-              United States <br /><br />
+              Togo Street <br />
+              Nankatsu, TGS 535022<br />
+              Japan <br /><br />
               <strong>Phone:</strong> +1 5589 55488 55<br />
               <strong>Email:</strong> info@example.com<br />
             </p>
@@ -19,42 +19,38 @@
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
               <li>
-                <i class="bx bx-chevron-right"></i> <a href="#">About us</a>
+                <i class="bx bx-chevron-right"></i> <a href="#">Alumni</a>
               </li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Event</a></li>
               <li>
-                <i class="bx bx-chevron-right"></i> <a href="#">Services</a>
+                <i class="bx bx-chevron-right"></i>
+                <a href="#">Contact</a>
               </li>
               <li>
                 <i class="bx bx-chevron-right"></i>
-                <a href="#">Terms of service</a>
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="#">Privacy policy</a>
+                <a href="#">Register</a>
               </li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4>Our Branch</h4>
             <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Japan</a></li>
               <li>
-                <i class="bx bx-chevron-right"></i> <a href="#">Web Design</a>
+                <i class="bx bx-chevron-right"></i>
+                <a href="#">South Korea</a>
               </li>
               <li>
                 <i class="bx bx-chevron-right"></i>
-                <a href="#">Web Development</a>
+                <a href="#">North Korea</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#">Poland</a>
               </li>
               <li>
                 <i class="bx bx-chevron-right"></i>
-                <a href="#">Product Management</a>
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i> <a href="#">Marketing</a>
-              </li>
-              <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="#">Graphic Design</a>
+                <a href="#">United States</a>
               </li>
             </ul>
           </div>
@@ -79,7 +75,7 @@
     <div class="container d-md-flex py-4">
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Fozimat</span></strong
+          &copy; Copyright <strong><span>Ouran Private Academy</span></strong
           >. All Rights Reserved
         </div>
         <div class="credits">

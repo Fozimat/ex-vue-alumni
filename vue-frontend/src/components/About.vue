@@ -7,7 +7,7 @@
           data-aos="fade-left"
           data-aos-delay="100"
         >
-          <img src="assets/img/about.jpg" class="img-fluid" alt="" />
+          <img src="assets/img/classroom.jpg" class="img-fluid h-100" alt="" />
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
           <h3>

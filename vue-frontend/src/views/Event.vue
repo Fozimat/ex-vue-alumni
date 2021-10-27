@@ -2,8 +2,8 @@
   <div>
     <Header />
     <main id="main">
-      <Breadcumb />
-      <EventCard />>
+      <Breadcumb :heading="subtitle" />
+      <EventCard />
     </main>
     <Footer />
   </div>
@@ -22,6 +22,11 @@ export default {
     Breadcumb,
     EventCard,
     Footer,
+  },
+  data() {
+    return {
+      subtitle: "Event",
+    };
   },
 };
 </script>
